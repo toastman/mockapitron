@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Andrii Vandakurov",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.14.2",
@@ -14,7 +14,5 @@
     "dreamjs": "^0.1.5",
     "express": "^4.13.3"
   },
-  "devDependencies": {
-    "rhc": "0.0.1"
-  }
+  "devDependencies": {}
 }
