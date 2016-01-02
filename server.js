@@ -1,9 +1,11 @@
 var express = require('express');
 var dream = require('dreamjs');
 var bodyParser = require('body-parser');
+var cors = require('cors');
 
 var app = express();
 
+app.use(cors());
 app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
@@ -14,9 +16,14 @@ function generateResponse (schema, quantity) {
             .output()
 }
 
-app.post('/', function(req, res) {
+app.get('/', function(req, res) {
+    res.send("mockapitron main page. To get some data you should make POST request with 'schema' and 'size' attributes");
+});
+
+app.post('*', function(req, res) {
     var schema = req.body.schema || {};
     var size = req.body.size || 0;
+    console.log('Client send this req.body: ', req.body);
     res.send(generateResponse(schema, size));
 });
 
