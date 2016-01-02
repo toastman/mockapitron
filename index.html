@@ -59,14 +59,31 @@
   mode<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>cors<span class="pl-pds">"</span></span>, 
   body<span class="pl-k">:</span> <span class="pl-smi">JSON</span>.<span class="pl-en">stringify</span>({
     schema<span class="pl-k">:</span> {
-      name<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>name<span class="pl-pds">'</span></span>,
-      adress<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>address<span class="pl-pds">'</span></span>
+      name<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span>,
+      address<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>address<span class="pl-pds">"</span></span>
     },
     size<span class="pl-k">:</span> <span class="pl-c1">3</span>
   })
 })
 .<span class="pl-en">then</span>(<span class="pl-k">function</span>(<span class="pl-smi">res</span>){ <span class="pl-k">return</span> <span class="pl-smi">res</span>.<span class="pl-en">json</span>() })
 .<span class="pl-en">then</span>(<span class="pl-k">function</span>(<span class="pl-smi">data</span>){ <span class="pl-en">console</span>.<span class="pl-c1">log</span>(data) })</pre></div>
+
+<p>Result:</p>
+
+<div class="highlight highlight-source-js"><pre>[
+  {
+    name<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Johanna Yates<span class="pl-pds">"</span></span>,
+    address<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>562 Nadleh Manor<span class="pl-pds">"</span></span>
+  },
+  {
+    name<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Minnie Lewis<span class="pl-pds">"</span></span>,
+    address<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>1197 Janaw Junction<span class="pl-pds">"</span></span>
+  },
+  {
+    name<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Travis Burke<span class="pl-pds">"</span></span>,
+    address<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>998 Jihiz Drive<span class="pl-pds">"</span></span>
+  }  
+]</pre></div>
 
 <h2>
 <a id="standard-schema-property-types" class="anchor" href="#standard-schema-property-types" aria-hidden="true"><span class="octicon octicon-link"></span></a>Standard schema property types:</h2>
