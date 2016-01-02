@@ -35,7 +35,18 @@
 
 <p><a href="https://github.com/adleroliveira/dreamjs"><img src="https://camo.githubusercontent.com/cf752a3a210cb265d7aeb4632134b482358c1df6/687474703a2f2f7777772e626f64616d61726b65742e636c2f736d616c6c5f647265616d5f6c6f676f2e706e67"></a></p>
 
-<p><a href="http://api-mockapitron.rhcloud.com/">online</a> version <a href="http://api-mockapitron.rhcloud.com/">http://api-mockapitron.rhcloud.com/</a></p>
+<p>and </p>
+
+<p><a href="http://chancejs.com/"><img src="http://chancejs.com/logo.png"></a></p>
+
+<h2>
+<a id="what-do-you-need-to-get-started-" class="anchor" href="#what-do-you-need-to-get-started-" aria-hidden="true"><span class="octicon octicon-link"></span></a>What do you need to get started ?</h2>
+
+<p>Send <strong>POST</strong> request to <a href="http://api-mockapitron.rhcloud.com/">http://api-mockapitron.rhcloud.com/</a> with <strong>schema</strong> and <strong>size</strong> parameters </p>
+
+<blockquote>
+<p>Default values for parameters { schema:{}, size:0 }</p>
+</blockquote>
 
 <p>Usage example:</p>
 
@@ -56,6 +67,30 @@
 })
 .<span class="pl-en">then</span>(<span class="pl-k">function</span>(<span class="pl-smi">res</span>){ <span class="pl-k">return</span> <span class="pl-smi">res</span>.<span class="pl-en">json</span>() })
 .<span class="pl-en">then</span>(<span class="pl-k">function</span>(<span class="pl-smi">data</span>){ <span class="pl-en">console</span>.<span class="pl-c1">log</span>(data) })</pre></div>
+
+<h2>
+<a id="standard-schema-property-types" class="anchor" href="#standard-schema-property-types" aria-hidden="true"><span class="octicon octicon-link"></span></a>Standard schema property types:</h2>
+
+<ul>
+<li>String </li>
+<li>Number</li>
+<li>Date</li>
+<li>Boolean</li>
+<li>Array</li>
+</ul>
+
+<h2>
+<a id="few-custom-schema-property-types" class="anchor" href="#few-custom-schema-property-types" aria-hidden="true"><span class="octicon octicon-link"></span></a>Few custom schema property types:</h2>
+
+<ul>
+<li>Name</li>
+<li>Age</li>
+<li>Address</li>
+<li>Gender</li>
+<li>(RGB) color</li>
+</ul>
+
+<p>Full list of available schema property types are available <a href="http://chancejs.com/">here</a></p>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/toastman">toastman</a></p>
@@ -63,6 +98,16 @@
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
-    
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-71938613-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
   </body>
 </html>
