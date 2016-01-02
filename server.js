@@ -17,7 +17,7 @@ function generateResponse (schema, quantity) {
 }
 
 app.get('/', function(req, res) {
-    res.send("mockapitron main page. To get some data you should make POST request with 'schema' and 'size' attributes");
+    res.redirect('http://toastman.github.io/mockapitron/');
 });
 
 app.post('*', function(req, res) {
