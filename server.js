@@ -16,14 +16,17 @@ function generateResponse (schema, quantity) {
             .output()
 }
 
-app.get('/', function(req, res) {
-    res.redirect('http://toastman.github.io/mockapitron/');
+app.get('*', function(req, res) {
+    console.log('Client send this req.query: ', req.query);
+    var size = req.query.size || 0;
+    delete req.query.size;
+    res.send(generateResponse(req.query, size));
 });
 
 app.post('*', function(req, res) {
+    console.log('Client send this req.body: ', req.body);
     var schema = req.body.schema || {};
     var size = req.body.size || 0;
-    console.log('Client send this req.body: ', req.body);
     res.send(generateResponse(schema, size));
 });
 
