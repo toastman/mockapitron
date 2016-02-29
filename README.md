@@ -5,9 +5,38 @@
 This is the tool for generating random api response based on [dream.js](https://github.com/adleroliveira/dreamjs)
 
 ## What do you need to get started ?
-Send **POST** request to [http://api-mockapitron.rhcloud.com/](http://api-mockapitron.rhcloud.com/) with **schema** and **size** parameters
-
 > Default values for parameters { schema:{}, size:0 }
+
+Send **GET** request to [http://api-mockapitron.rhcloud.com/](http://api-mockapitron.rhcloud.com/) with **size** and all other data that you expect in response
+
+Usage example:
+
+```javascript
+fetch('http://api-mockapitron.rhcloud.com/?size=3&name=name&address=address')
+.then(function(res){ return res.json() })
+.then(function(data){ console.log(data) })
+```
+
+Result:
+
+```javascript
+[
+  {
+    name: "Johanna Yates",
+    address: "562 Nadleh Manor"
+  },
+  {
+    name: "Minnie Lewis",
+    address: "1197 Janaw Junction"
+  },
+  {
+    name: "Travis Burke",
+    address: "998 Jihiz Drive"
+  }
+]
+```
+
+Send **POST** request to [http://api-mockapitron.rhcloud.com/](http://api-mockapitron.rhcloud.com/) with **schema** and **size** parameters
 
 Usage example:
 
