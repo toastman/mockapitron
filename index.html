@@ -29,22 +29,45 @@
       </header>
       <section>
         <h2>
-<a id="tool-for-generating-random-api-response-based-on" class="anchor" href="#tool-for-generating-random-api-response-based-on" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tool for generating random api response based on</h2>
+<a id="mockapitron" class="anchor" href="#mockapitron" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Mockapitron</h2>
 
-<p><a href="https://github.com/adleroliveira/dreamjs"><img src="https://camo.githubusercontent.com/cf752a3a210cb265d7aeb4632134b482358c1df6/687474703a2f2f7777772e626f64616d61726b65742e636c2f736d616c6c5f647265616d5f6c6f676f2e706e67"></a></p>
+<p><strong>Read more on <a href="http://toastman.github.io/mockapitron/">http://toastman.github.io/mockapitron/</a></strong></p>
 
-<p>and </p>
-
-<p><a href="http://chancejs.com/"><img src="http://chancejs.com/logo.png"></a></p>
+<p>This is the tool for generating random api response based on <a href="https://github.com/adleroliveira/dreamjs">dream.js</a></p>
 
 <h2>
-<a id="what-do-you-need-to-get-started-" class="anchor" href="#what-do-you-need-to-get-started-" aria-hidden="true"><span class="octicon octicon-link"></span></a>What do you need to get started ?</h2>
-
-<p>Send <strong>POST</strong> request to <a href="http://api-mockapitron.rhcloud.com/">http://api-mockapitron.rhcloud.com/</a> with <strong>schema</strong> and <strong>size</strong> parameters </p>
+<a id="what-do-you-need-to-get-started-" class="anchor" href="#what-do-you-need-to-get-started-" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What do you need to get started ?</h2>
 
 <blockquote>
 <p>Default values for parameters { schema:{}, size:0 }</p>
 </blockquote>
+
+<p>Send <strong>GET</strong> request to <a href="http://api-mockapitron.rhcloud.com/">http://api-mockapitron.rhcloud.com/</a> with <strong>size</strong> and all other data that you expect in response</p>
+
+<p>Usage example:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-en">fetch</span>(<span class="pl-s"><span class="pl-pds">'</span>http://api-mockapitron.rhcloud.com/?size=3&amp;name=name&amp;address=address<span class="pl-pds">'</span></span>)
+.<span class="pl-en">then</span>(<span class="pl-k">function</span>(<span class="pl-smi">res</span>){ <span class="pl-k">return</span> <span class="pl-smi">res</span>.<span class="pl-en">json</span>() })
+.<span class="pl-en">then</span>(<span class="pl-k">function</span>(<span class="pl-smi">data</span>){ <span class="pl-en">console</span>.<span class="pl-c1">log</span>(data) })</pre></div>
+
+<p>Result:</p>
+
+<div class="highlight highlight-source-js"><pre>[
+  {
+    name<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Johanna Yates<span class="pl-pds">"</span></span>,
+    address<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>562 Nadleh Manor<span class="pl-pds">"</span></span>
+  },
+  {
+    name<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Minnie Lewis<span class="pl-pds">"</span></span>,
+    address<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>1197 Janaw Junction<span class="pl-pds">"</span></span>
+  },
+  {
+    name<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Travis Burke<span class="pl-pds">"</span></span>,
+    address<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>998 Jihiz Drive<span class="pl-pds">"</span></span>
+  }
+]</pre></div>
+
+<p>Send <strong>POST</strong> request to <a href="http://api-mockapitron.rhcloud.com/">http://api-mockapitron.rhcloud.com/</a> with <strong>schema</strong> and <strong>size</strong> parameters</p>
 
 <p>Usage example:</p>
 
@@ -54,8 +77,8 @@
     <span class="pl-s"><span class="pl-pds">'</span>Accept<span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>application/json<span class="pl-pds">'</span></span>,
     <span class="pl-s"><span class="pl-pds">'</span>Content-Type<span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>application/json<span class="pl-pds">'</span></span>
   },
-  mode<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>cors<span class="pl-pds">"</span></span>, 
-  body<span class="pl-k">:</span> <span class="pl-smi">JSON</span>.<span class="pl-en">stringify</span>({
+  mode<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>cors<span class="pl-pds">"</span></span>,
+  body<span class="pl-k">:</span> <span class="pl-c1">JSON</span>.<span class="pl-en">stringify</span>({
     schema<span class="pl-k">:</span> {
       name<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span>,
       address<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>address<span class="pl-pds">"</span></span>
@@ -80,14 +103,14 @@
   {
     name<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Travis Burke<span class="pl-pds">"</span></span>,
     address<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>998 Jihiz Drive<span class="pl-pds">"</span></span>
-  }  
+  }
 ]</pre></div>
 
 <h2>
-<a id="standard-schema-property-types" class="anchor" href="#standard-schema-property-types" aria-hidden="true"><span class="octicon octicon-link"></span></a>Standard schema property types:</h2>
+<a id="standard-schema-property-types" class="anchor" href="#standard-schema-property-types" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Standard schema property types:</h2>
 
 <ul>
-<li>String </li>
+<li>String</li>
 <li>Number</li>
 <li>Date</li>
 <li>Boolean</li>
@@ -95,7 +118,7 @@
 </ul>
 
 <h2>
-<a id="few-custom-schema-property-types" class="anchor" href="#few-custom-schema-property-types" aria-hidden="true"><span class="octicon octicon-link"></span></a>Few custom schema property types:</h2>
+<a id="few-custom-schema-property-types" class="anchor" href="#few-custom-schema-property-types" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Few custom schema property types:</h2>
 
 <ul>
 <li>Name</li>
