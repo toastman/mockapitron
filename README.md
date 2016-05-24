@@ -5,7 +5,6 @@
 This is the tool for generating random api response based on [dream.js](https://github.com/adleroliveira/dreamjs)
 
 ## What do you need to get started ?
-> Default values for parameters { schema:{}, size:0 }
 
 Send **GET** request to [http://api-mockapitron.rhcloud.com/](http://api-mockapitron.rhcloud.com/) with **size** and all other data that you expect in response
 
@@ -37,6 +36,7 @@ Result:
 ```
 
 Send **POST** request to [http://api-mockapitron.rhcloud.com/](http://api-mockapitron.rhcloud.com/) with **schema** and **size** parameters
+> Default values for parameters { schema:{}, size:0 }
 
 Usage example:
 
